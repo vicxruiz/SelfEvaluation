@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jxd-sc-dS8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="museosans-500.otf">
+            <string>MuseoSans-500</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Self Evaluation-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelfEvaluation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FULL NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-g3-CdE">
+                                <rect key="frame" x="20" y="20" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROJECT REPO" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hff-L9-9AT">
+                                <rect key="frame" x="20" y="104" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgV-xV-jPs">
+                                <rect key="frame" x="20" y="62" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PROJECT URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-69-RKN">
+                                <rect key="frame" x="20" y="146" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6rC-LX-6ni">
+                                <rect key="frame" x="20" y="188" width="374" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uik-lv-fBQ">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uik-lv-fBQ" id="keq-6n-hZB">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USING BEST PRACTICES FOR OOP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Dl-ZwA">
+                                                    <rect key="frame" x="20" y="12" width="268" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="268" id="lM5-XK-ua6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-9M-iZx">
+                                                    <rect key="frame" x="296" y="5" width="70" height="34"/>
+                                                    <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="x1x-d8-s4U"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="88k-9M-iZx" firstAttribute="leading" secondItem="bb8-Dl-ZwA" secondAttribute="trailing" constant="8" id="6sv-vj-47D"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="bottom" secondItem="keq-6n-hZB" secondAttribute="bottomMargin" id="ACm-uq-PdM"/>
+                                                <constraint firstItem="88k-9M-iZx" firstAttribute="top" secondItem="keq-6n-hZB" secondAttribute="topMargin" constant="-6" id="Dde-SR-ZQ6"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="keq-6n-hZB" secondAttribute="centerY" id="MKa-gp-gQF"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="88k-9M-iZx" secondAttribute="centerY" id="ZWd-fc-Kxe"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="leading" secondItem="keq-6n-hZB" secondAttribute="leadingMargin" id="sHt-RM-LJT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-Qn-GYW">
+                                <rect key="frame" x="20" y="1028" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.95856088399999995" green="0.35846284029999997" blue="0.41334390640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HG0-m9-His"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="17"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27450980392156865" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eb3-69-RKN" firstAttribute="top" secondItem="hff-L9-9AT" secondAttribute="bottom" constant="8" id="0eQ-8q-TYB"/>
+                            <constraint firstItem="BH4-g3-CdE" firstAttribute="trailing" secondItem="MgV-xV-jPs" secondAttribute="trailing" id="2yi-hz-aiI"/>
+                            <constraint firstItem="hff-L9-9AT" firstAttribute="leading" secondItem="eb3-69-RKN" secondAttribute="leading" id="4Pb-UL-pme"/>
+                            <constraint firstItem="BH4-g3-CdE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5L4-Nt-9YH"/>
+                            <constraint firstItem="6rC-LX-6ni" firstAttribute="top" secondItem="eb3-69-RKN" secondAttribute="bottom" constant="8" id="6Ih-Ux-MFU"/>
+                            <constraint firstItem="eb3-69-RKN" firstAttribute="leading" secondItem="6rC-LX-6ni" secondAttribute="leading" id="81h-MW-Kjf"/>
+                            <constraint firstItem="MgV-xV-jPs" firstAttribute="leading" secondItem="hff-L9-9AT" secondAttribute="leading" id="G4r-wb-Qae"/>
+                            <constraint firstItem="BH4-g3-CdE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Sjs-Fb-AAT"/>
+                            <constraint firstItem="MgV-xV-jPs" firstAttribute="trailing" secondItem="hff-L9-9AT" secondAttribute="trailing" id="UUo-dn-jcm"/>
+                            <constraint firstItem="6rC-LX-6ni" firstAttribute="leading" secondItem="TPX-Qn-GYW" secondAttribute="leading" id="caZ-wb-mvK"/>
+                            <constraint firstItem="TPX-Qn-GYW" firstAttribute="top" secondItem="6rC-LX-6ni" secondAttribute="bottom" constant="27" id="hAB-3v-Z3v"/>
+                            <constraint firstItem="MgV-xV-jPs" firstAttribute="top" secondItem="BH4-g3-CdE" secondAttribute="bottom" constant="8" id="pOa-Vb-0Mn"/>
+                            <constraint firstItem="BH4-g3-CdE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rdD-sf-Sro"/>
+                            <constraint firstItem="TPX-Qn-GYW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vRm-GZ-D4s"/>
+                            <constraint firstItem="hff-L9-9AT" firstAttribute="trailing" secondItem="eb3-69-RKN" secondAttribute="trailing" id="vVi-Uv-EMN"/>
+                            <constraint firstItem="eb3-69-RKN" firstAttribute="trailing" secondItem="6rC-LX-6ni" secondAttribute="trailing" id="wGW-Wa-Ehh"/>
+                            <constraint firstItem="BH4-g3-CdE" firstAttribute="leading" secondItem="MgV-xV-jPs" secondAttribute="leading" id="z1X-Rh-qC9"/>
+                            <constraint firstItem="hff-L9-9AT" firstAttribute="top" secondItem="MgV-xV-jPs" secondAttribute="bottom" constant="8" id="zS5-kP-qhb"/>
+                            <constraint firstItem="6rC-LX-6ni" firstAttribute="trailing" secondItem="TPX-Qn-GYW" secondAttribute="trailing" id="zzu-se-nvO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Self Evaluation" id="DbR-hB-6Sz"/>
+                    <size key="freeformSize" width="414" height="1200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rju-02-tBk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jxd-sc-dS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GYy-Yb-Jki">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KvO-Jq-gj8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92D-cC-Izn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
