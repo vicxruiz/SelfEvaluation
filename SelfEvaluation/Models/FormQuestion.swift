@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FormQuestion: Hashable {
+struct FormQuestion: Equatable {
     var description: String
-    var answer: Int?
+    var answer: Int
 }

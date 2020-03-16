@@ -34,6 +34,7 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         initBinding()
         setupTableView()
+        formViewModel.formController = formController
     }
     
     //MARK: - Helper

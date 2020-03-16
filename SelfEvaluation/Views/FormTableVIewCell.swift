@@ -35,5 +35,6 @@ class FormTableViewCell: UITableViewCell {
             return
         }
         formFieldLabel.text = question.description + ":"
+        formTextField.text = "\(question.answer)"
     }
 }
