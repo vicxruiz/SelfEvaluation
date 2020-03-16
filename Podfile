@@ -7,7 +7,5 @@ target 'SelfEvaluation' do
 
 pod 'RxSwift', :git=>'https://github.com/ReactiveX/RxSwift.git'
 pod 'RxCocoa', :git=>'https://github.com/ReactiveX/RxSwift.git'
-pod 'JGProgressHUD'
-
 
 end

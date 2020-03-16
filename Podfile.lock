@@ -1,5 +1,4 @@
 PODS:
-  - JGProgressHUD (2.1)
   - RxCocoa (5.1.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -8,13 +7,11 @@ PODS:
   - RxSwift (5.1.0)
 
 DEPENDENCIES:
-  - JGProgressHUD
   - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`)
   - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`)
 
 SPEC REPOS:
   trunk:
-    - JGProgressHUD
     - RxRelay
 
 EXTERNAL SOURCES:
@@ -32,11 +29,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ReactiveX/RxSwift.git
 
 SPEC CHECKSUMS:
-  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
   RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
 
-PODFILE CHECKSUM: a4b1d8e5d71cb3cd610afab6a2f3f9879d29f7ae
+PODFILE CHECKSUM: 9659298e7306a4af0c5f763726da58d3fd11a1e7
 
 COCOAPODS: 1.8.4
