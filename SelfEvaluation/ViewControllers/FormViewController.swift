@@ -70,8 +70,8 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         output += "Full Name: \(formViewModel.fullName.value)\n"
         output += "Email: \(formViewModel.email.value)\n"
         output += "Project Repo: \(formViewModel.projectRepo.value)\n"
-        output += "Project URL: \(formViewModel.projectURL.value)\n\n"
-        output += "Results\n"
+        output += "Project URL: \(formViewModel.projectURL.value)\n"
+        output += "Results:\n"
         for question in formController.questions {
             output += "\(question.description): \(question.answer)\n"
         }
