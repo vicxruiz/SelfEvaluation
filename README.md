@@ -23,7 +23,7 @@ Package management tool
 
 MVVM
 
-## Key Features
+### Key Features
 
 - Candidate can easily send self-evaluation to hiring manager via email 
 
