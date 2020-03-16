@@ -1,24 +1,42 @@
 PODS:
-  - ReactiveCocoa (5.0.4):
-    - ReactiveSwift (~> 1.1)
-  - ReactiveSwift (1.1.5):
-    - Result (~> 3.2)
-  - Result (3.2.4)
+  - JGProgressHUD (2.1)
+  - RxCocoa (5.1.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.0)
 
 DEPENDENCIES:
-  - ReactiveCocoa (~> 5.0.0)
+  - JGProgressHUD
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`)
 
 SPEC REPOS:
   trunk:
-    - ReactiveCocoa
-    - ReactiveSwift
-    - Result
+    - JGProgressHUD
+    - RxRelay
+
+EXTERNAL SOURCES:
+  RxCocoa:
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxSwift:
+    :git: https://github.com/ReactiveX/RxSwift.git
+
+CHECKOUT OPTIONS:
+  RxCocoa:
+    :commit: 9abd4830bc5759b93439402c022d5bd7e756cb10
+    :git: https://github.com/ReactiveX/RxSwift.git
+  RxSwift:
+    :commit: 9abd4830bc5759b93439402c022d5bd7e756cb10
+    :git: https://github.com/ReactiveX/RxSwift.git
 
 SPEC CHECKSUMS:
-  ReactiveCocoa: b31e754d15937811ede648fc83cd68f5de70a3d4
-  ReactiveSwift: 3fea31f8fc49f112d2dc613282c5d395c4d167bb
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
+  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
+  RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
+  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
 
-PODFILE CHECKSUM: 7bc4c5befbcc016c120fa5a5232d981f63817b30
+PODFILE CHECKSUM: a4b1d8e5d71cb3cd610afab6a2f3f9879d29f7ae
 
 COCOAPODS: 1.8.4

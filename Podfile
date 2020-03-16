@@ -5,14 +5,9 @@ target 'SelfEvaluation' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SelfEvaluation
+pod 'RxSwift', :git=>'https://github.com/ReactiveX/RxSwift.git'
+pod 'RxCocoa', :git=>'https://github.com/ReactiveX/RxSwift.git'
+pod 'JGProgressHUD'
 
-  target 'SelfEvaluationTests' do
-
-pod 'ReactiveCocoa', '~> 5.0.0'
-
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
