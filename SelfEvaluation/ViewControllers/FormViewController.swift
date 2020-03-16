@@ -58,7 +58,7 @@ class FormViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func submitButtonPressed(_ sender: Any) {
-        
+        print(formController.questions[0].answer)
     }
 }
 
@@ -75,9 +75,22 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         let question = formController.questions[indexPath.row]
+        cell.delegate = self
+        cell.indexPath = indexPath
         cell.question = question
         
         return cell
+    }
+}
+
+
+extension FormViewController: FormCellDelegate {
+    func didComplete(_ cell: FormTableViewCell, atIndexPath indexPath: IndexPath) {
+        let question = formController.questions[indexPath.row]
+        guard let text = cell.formTextField.text, !text.isEmpty, let answer = Int(text) else {
+            return
+        }
+        formController.update(question: question, answer: answer)
     }
 }
 

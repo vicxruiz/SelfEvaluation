@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol StepCellDelegate {
+protocol FormCellDelegate {
     func didComplete(_ cell: FormTableViewCell, atIndexPath indexPath: IndexPath)
 }
 
-class FormTableViewCell: UITableViewCell {
+class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     //MARK: - Properties
     
@@ -22,10 +22,19 @@ class FormTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+    var delegate: FormCellDelegate?
+    var indexPath: IndexPath!
     
     //MARK: - Outlets
     @IBOutlet weak var formFieldLabel: UILabel!
     @IBOutlet weak var formTextField: UITextField!
+    
+    // MARK: - View Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        formTextField.delegate = self
+    }
     
     //MARK: - Helpers
     
@@ -36,5 +45,11 @@ class FormTableViewCell: UITableViewCell {
         }
         formFieldLabel.text = question.description + ":"
         formTextField.text = "\(question.answer)"
+    }
+}
+
+extension FormTableViewCell {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        delegate?.didComplete(self, atIndexPath: indexPath)
     }
 }
