@@ -17,7 +17,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FormViewController" customModule="SelfEvaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="FULL NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-g3-CdE">
@@ -50,11 +50,11 @@
                                 <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6rC-LX-6ni">
-                                <rect key="frame" x="20" y="212" width="374" height="789"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6rC-LX-6ni">
+                                <rect key="frame" x="20" y="212" width="374" height="485"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uik-lv-fBQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FormCell" id="uik-lv-fBQ" customClass="FormTableViewCell" customModule="SelfEvaluation" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="45.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uik-lv-fBQ" id="keq-6n-hZB">
@@ -70,6 +70,9 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-9M-iZx">
                                                     <rect key="frame" x="297" y="8" width="70" height="29.5"/>
                                                     <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Lxa-cQ-8Db"/>
+                                                    </constraints>
                                                     <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -85,11 +88,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="formFieldLabel" destination="bb8-Dl-ZwA" id="kRu-Mk-dgC"/>
+                                            <outlet property="formTextField" destination="88k-9M-iZx" id="cEn-UR-mQD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-Qn-GYW">
-                                <rect key="frame" x="20" y="1028" width="374" height="50"/>
+                                <rect key="frame" x="20" y="724" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.95856088399999995" green="0.35846284029999997" blue="0.41334390640000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="H1G-aW-Bkl"/>
@@ -138,22 +145,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Self Evaluation" id="DbR-hB-6Sz"/>
-                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="emailTextField" destination="MgV-xV-jPs" id="5FN-We-JK3"/>
                         <outlet property="fullNameTextField" destination="BH4-g3-CdE" id="qz5-UE-ptK"/>
                         <outlet property="projectRepoTextField" destination="hff-L9-9AT" id="por-Wr-qqU"/>
                         <outlet property="projectURLTextField" destination="eb3-69-RKN" id="KYW-CH-YbJ"/>
                         <outlet property="submitButton" destination="TPX-Qn-GYW" id="cNO-q9-x1w"/>
+                        <outlet property="tableView" destination="6rC-LX-6ni" id="bum-LN-0P0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="925" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rju-02-tBk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92D-cC-Izn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jxd-sc-dS8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="GYy-Yb-Jki">
@@ -169,7 +177,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KvO-Jq-gj8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="92D-cC-Izn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>

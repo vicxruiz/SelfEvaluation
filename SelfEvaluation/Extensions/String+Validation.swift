@@ -20,7 +20,7 @@ extension String {
     }
     
     func isValidURL() -> Bool {
-        if let url = NSURL(string: self) {
+        if let url = URL(string: self) {
             return UIApplication.shared.canOpenURL(url as URL)
         }
         return false

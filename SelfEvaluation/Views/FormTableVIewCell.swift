@@ -10,6 +10,26 @@ import Foundation
 import UIKit
 
 class FormTableViewCell: UITableViewCell {
+    
+    //MARK: - Properties
+    
+    var question: FormQuestion? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    //MARK: - Outlets
     @IBOutlet weak var formFieldLabel: UILabel!
     @IBOutlet weak var formTextField: UITextField!
+    
+    //MARK: - Helpers
+    
+    func updateViews() {
+        guard let question = question else {
+            print("No Question")
+            return
+        }
+        formFieldLabel.text = question.description + ":"
+    }
 }
