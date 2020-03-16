@@ -15,7 +15,7 @@ class FormViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var projectRepoTextField: UITextField!
-    @IBOutlet weak var projectURL: UITextField!
+    @IBOutlet weak var projectURLTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
     private var formViewModel = FormViewModel()
@@ -29,6 +29,8 @@ class FormViewController: UIViewController {
     func initBinding() {
         _ = fullNameTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.fullName)
         _ = emailTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.email)
+        _ = projectRepoTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.projectRepo)
+        _ = projectURLTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.projectURL)
         _ = formViewModel.isValid.bind(to: submitButton.rx.isEnabled)
         _ = formViewModel.isValid.subscribe(onNext: { [unowned self] isValid in
             self.submitButton.alpha = isValid ? 1 : 0.5

@@ -143,7 +143,7 @@
                         <outlet property="emailTextField" destination="MgV-xV-jPs" id="5FN-We-JK3"/>
                         <outlet property="fullNameTextField" destination="BH4-g3-CdE" id="qz5-UE-ptK"/>
                         <outlet property="projectRepoTextField" destination="hff-L9-9AT" id="por-Wr-qqU"/>
-                        <outlet property="projectURL" destination="eb3-69-RKN" id="QXr-4r-YCB"/>
+                        <outlet property="projectURLTextField" destination="eb3-69-RKN" id="KYW-CH-YbJ"/>
                         <outlet property="submitButton" destination="TPX-Qn-GYW" id="cNO-q9-x1w"/>
                     </connections>
                 </viewController>

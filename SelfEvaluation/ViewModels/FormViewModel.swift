@@ -18,7 +18,8 @@ struct FormViewModel {
 
     var isValid: Observable<Bool> {
         return Observable.combineLatest(fullName.asObservable(), email.asObservable(), projectRepo.asObservable(), projectURL.asObservable()) {
-            $0.count >= 3 && $1.count >= 3 && $1.isValidEmail() && $2.count >= 3 && $3.count >= 3
+            !$0.isEmpty && !$1.isEmpty && $1.isValidEmail() && !$2.isEmpty && !$3.isEmpty && $3.isValidURL()
         }
     }
+
 }

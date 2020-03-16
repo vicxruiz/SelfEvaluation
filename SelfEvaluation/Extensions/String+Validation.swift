@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     func isValidEmail() -> Bool {
@@ -16,5 +17,12 @@ extension String {
         } catch {
             return false
         }
+    }
+    
+    func isValidURL() -> Bool {
+        if let url = NSURL(string: self) {
+            return UIApplication.shared.canOpenURL(url as URL)
+        }
+        return false
     }
 }
