@@ -11,8 +11,6 @@ import RxSwift
 import RxRelay
 
 struct FormViewModel {
-    
-    var formController: FormController?
     var fullName = BehaviorRelay<String>(value: "")
     var email = BehaviorRelay<String>(value: "")
     var projectRepo = BehaviorRelay<String>(value: "")

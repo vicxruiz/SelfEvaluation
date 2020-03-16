@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import MessageUI
 
-class FormViewController: UIViewController {
+class FormViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     //MARK: - Outlets
 
@@ -34,7 +35,10 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         initBinding()
         setupTableView()
-        formViewModel.formController = formController
+        if !MFMailComposeViewController.canSendMail() {
+            Service.showAlert(on: self, style: .alert, title: "Mail Services Not Available", message: "Please use valid device.")
+            return
+        }
     }
     
     //MARK: - Helper
@@ -55,10 +59,29 @@ class FormViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    func displayFormInfo() {
+        var output = ""
+        for question in formController.questions {
+            output += "Full Name: \(formViewModel.fullName.value)\n"
+            output += "Email: \(formViewModel.email.value)\n"
+            output += "Project Repo: \(formViewModel.projectRepo.value)\n"
+            output += "Project URL: \(formViewModel.projectURL.value)\n\n"
+            output += "Results\n"
+            output += "\(question.description): \(question.answer)\n"
+        }
+    }
+    
     //MARK: - Actions
     
     @IBAction func submitButtonPressed(_ sender: Any) {
-        print(formController.questions[0].answer)
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+
+        composeVC.setToRecipients(["ruizdvictor@gmail.com"])
+        composeVC.setSubject("\(self.formViewModel.fullName.value) Self Evaluation")
+        composeVC.setMessageBody(" ", isHTML: false)
+
+        self.present(composeVC, animated: true, completion: nil)
     }
 }
 
