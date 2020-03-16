@@ -36,6 +36,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         initBinding()
         setupTableView()
         updateViews()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {

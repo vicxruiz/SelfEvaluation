@@ -52,4 +52,8 @@ extension FormTableViewCell {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         delegate?.didComplete(self, atIndexPath: indexPath)
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
 }
