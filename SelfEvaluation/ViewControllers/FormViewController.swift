@@ -35,6 +35,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         super.viewDidLoad()
         initBinding()
         setupTableView()
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +87,17 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
             return false
         }
         return true
+    }
+    
+    private func updateViews() {
+        fullNameTextField.attributedPlaceholder = NSAttributedString(string: "FULL NAME",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        projectRepoTextField.attributedPlaceholder = NSAttributedString(string: "PROJECT REPO",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        projectURLTextField.attributedPlaceholder = NSAttributedString(string: "PROJECT URL",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL",
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
     }
     //MARK: - Actions
     
