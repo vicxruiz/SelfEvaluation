@@ -91,13 +91,13 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
     
     private func updateViews() {
         fullNameTextField.attributedPlaceholder = NSAttributedString(string: "FULL NAME",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        attributes: [NSAttributedString.Key.foregroundColor: Service.darkGreenColor])
         projectRepoTextField.attributedPlaceholder = NSAttributedString(string: "PROJECT REPO",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        attributes: [NSAttributedString.Key.foregroundColor: Service.darkGreenColor])
         projectURLTextField.attributedPlaceholder = NSAttributedString(string: "PROJECT URL",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        attributes: [NSAttributedString.Key.foregroundColor: Service.darkGreenColor])
         emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        attributes: [NSAttributedString.Key.foregroundColor: Service.darkGreenColor])
     }
     //MARK: - Actions
     
