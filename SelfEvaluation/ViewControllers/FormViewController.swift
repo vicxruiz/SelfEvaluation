@@ -67,12 +67,12 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
     
     private func displayFormInfo() -> String {
         var output = ""
+        output += "Full Name: \(formViewModel.fullName.value)\n"
+        output += "Email: \(formViewModel.email.value)\n"
+        output += "Project Repo: \(formViewModel.projectRepo.value)\n"
+        output += "Project URL: \(formViewModel.projectURL.value)\n\n"
+        output += "Results\n"
         for question in formController.questions {
-            output += "Full Name: \(formViewModel.fullName.value)\n"
-            output += "Email: \(formViewModel.email.value)\n"
-            output += "Project Repo: \(formViewModel.projectRepo.value)\n"
-            output += "Project URL: \(formViewModel.projectURL.value)\n\n"
-            output += "Results\n"
             output += "\(question.description): \(question.answer)\n"
         }
         return output
@@ -100,6 +100,11 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         emailTextField.attributedPlaceholder = NSAttributedString(string: "EMAIL",
         attributes: [NSAttributedString.Key.foregroundColor: Service.darkGreenColor])
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
     //MARK: - Actions
     
     @IBAction func submitButtonPressed(_ sender: Any) {
@@ -108,6 +113,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
 
         composeVC.setToRecipients(["ruizdvictor@gmail.com"])
         composeVC.setSubject("\(self.formViewModel.fullName.value) Self Evaluation")
+        
         if formIsValid() {
             let output = displayFormInfo()
             composeVC.setMessageBody(output, isHTML: false)
@@ -151,4 +157,3 @@ extension FormViewController: FormCellDelegate {
         formController.update(question: question, answer: answer)
     }
 }
-
