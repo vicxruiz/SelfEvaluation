@@ -22,7 +22,16 @@ class FormViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        
+        initBinding()
+    }
+    
+    func initBinding() {
+        _ = fullNameTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.fullName)
+        _ = emailTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.email)
+        _ = formViewModel.isValid.bind(to: submitButton.rx.isEnabled)
+        _ = formViewModel.isValid.subscribe(onNext: { [unowned self] isValid in
+            self.submitButton.alpha = isValid ? 1 : 0.5
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
