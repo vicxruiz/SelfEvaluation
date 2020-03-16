@@ -28,7 +28,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="PROJECT REPO" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hff-L9-9AT">
                                 <rect key="frame" x="20" y="116" width="374" height="40"/>
@@ -38,7 +38,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgV-xV-jPs">
                                 <rect key="frame" x="20" y="68" width="374" height="40"/>
@@ -48,7 +48,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6rC-LX-6ni">
                                 <rect key="frame" x="20" y="212" width="374" height="485"/>
@@ -117,7 +117,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" textContentType="url"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
