@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol StepCellDelegate {
+    func didComplete(_ cell: FormTableViewCell, atIndexPath indexPath: IndexPath)
+}
+
 class FormTableViewCell: UITableViewCell {
     
     //MARK: - Properties

@@ -19,7 +19,7 @@ class FormController {
     
     func createQuestions() {
         for questionString in questionStrings {
-            let questionString = FormQuestion(description: questionString)
+            let questionString = FormQuestion(description: questionString, answer: nil)
             questions.append(questionString)
         }
     }

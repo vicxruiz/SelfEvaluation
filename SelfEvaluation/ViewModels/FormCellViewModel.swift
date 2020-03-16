@@ -1,5 +1,5 @@
 //
-//  FormQuestions.swift
+//  FormCellViewModel.swift
 //  SelfEvaluation
 //
 //  Created by Victor Ruiz on 3/16/20.
@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
 
-struct FormQuestion: Hashable {
-    var description: String
-    var answer: Int?
+struct FormCellViewModel {
+    var answer = BehaviorRelay<Int>(value: 0)
+    
+
 }
+
+
