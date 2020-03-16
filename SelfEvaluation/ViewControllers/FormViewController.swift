@@ -22,6 +22,7 @@ class FormViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         initBinding()
     }
     

@@ -15,7 +15,7 @@
         <!--Self Evaluation-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelfEvaluation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FormViewController" customModule="SelfEvaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,38 +55,33 @@
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uik-lv-fBQ">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="45.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uik-lv-fBQ" id="keq-6n-hZB">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="45.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="USING BEST PRACTICES FOR OOP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Dl-ZwA">
-                                                    <rect key="frame" x="20" y="12" width="268" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="268" id="BQX-17-HQ7"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="20" y="13" width="244.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
                                                     <color key="textColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-9M-iZx">
-                                                    <rect key="frame" x="296" y="5" width="70" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-9M-iZx">
+                                                    <rect key="frame" x="297" y="8" width="70" height="29.5"/>
                                                     <color key="backgroundColor" red="0.89560216670000004" green="0.99440139530000005" blue="0.88265854119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="tai-qp-IXC"/>
-                                                    </constraints>
                                                     <color key="textColor" red="0.20208826660000001" green="0.58860284090000003" blue="0.62332546710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="keq-6n-hZB" secondAttribute="centerY" id="48f-dd-nL4"/>
-                                                <constraint firstItem="88k-9M-iZx" firstAttribute="leading" secondItem="bb8-Dl-ZwA" secondAttribute="trailing" constant="8" id="FHJ-Nv-3yA"/>
-                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="88k-9M-iZx" secondAttribute="centerY" id="Hde-ZY-KlE"/>
-                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="leading" secondItem="keq-6n-hZB" secondAttribute="leadingMargin" id="hHd-kp-ASV"/>
-                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="bottom" secondItem="keq-6n-hZB" secondAttribute="bottomMargin" id="qeY-vJ-1NU"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="keq-6n-hZB" secondAttribute="centerY" id="CqS-CE-KMd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="88k-9M-iZx" secondAttribute="trailing" constant="-13" id="MYN-m5-4CZ"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="leading" secondItem="keq-6n-hZB" secondAttribute="leadingMargin" id="f2z-sg-dsg"/>
+                                                <constraint firstItem="88k-9M-iZx" firstAttribute="leading" secondItem="bb8-Dl-ZwA" secondAttribute="trailing" constant="32.5" id="gUD-ve-K9p"/>
+                                                <constraint firstItem="bb8-Dl-ZwA" firstAttribute="centerY" secondItem="88k-9M-iZx" secondAttribute="centerY" id="tWH-ab-6Yw"/>
+                                                <constraint firstItem="88k-9M-iZx" firstAttribute="top" secondItem="keq-6n-hZB" secondAttribute="topMargin" constant="-3" id="uYI-FX-SXy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.27450980390000002" green="0.41284322740000001" blue="0.56659001109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,6 +98,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9CQ-3w-Xaq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="PROJECT URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-69-RKN">
                                 <rect key="frame" x="20" y="164" width="374" height="40"/>
@@ -141,6 +139,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Self Evaluation" id="DbR-hB-6Sz"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="MgV-xV-jPs" id="5FN-We-JK3"/>
+                        <outlet property="fullNameTextField" destination="BH4-g3-CdE" id="qz5-UE-ptK"/>
+                        <outlet property="projectRepoTextField" destination="hff-L9-9AT" id="por-Wr-qqU"/>
+                        <outlet property="projectURL" destination="eb3-69-RKN" id="QXr-4r-YCB"/>
+                        <outlet property="submitButton" destination="TPX-Qn-GYW" id="cNO-q9-x1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,6 +18,7 @@
 		9897A3E5241F55D600906CBB /* FormTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3E4241F55D600906CBB /* FormTableVIewCell.swift */; };
 		9897A3E8241F569A00906CBB /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3E7241F569A00906CBB /* FormViewModel.swift */; };
 		9897A3F6241F5E2600906CBB /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3F5241F5E2600906CBB /* String+Validation.swift */; };
+		9897A3FA241F650200906CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3F9241F650200906CBB /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9897A3F0241F581E00906CBB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9897A3F2241F582500906CBB /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9897A3F5241F5E2600906CBB /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		9897A3F9241F650200906CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B1CA6B57F40D267071CD2DED /* Pods-SelfEvaluation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfEvaluation.release.xcconfig"; path = "Target Support Files/Pods-SelfEvaluation/Pods-SelfEvaluation.release.xcconfig"; sourceTree = "<group>"; };
 		DD0A8BE69CE10DEC8641ED0A /* Pods_SelfEvaluation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelfEvaluation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 		983C696A241EC93D0094C36E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9897A3F9241F650200906CBB /* SceneDelegate.swift */,
 				983C6973241ED8520094C36E /* museosans-500.otf */,
 				983C6948241EC8A30094C36E /* AppDelegate.swift */,
 				983C6956241EC8A90094C36E /* Info.plist */,
@@ -339,6 +342,7 @@
 				9897A3E2241F551500906CBB /* FormViewController.swift in Sources */,
 				9897A3E8241F569A00906CBB /* FormViewModel.swift in Sources */,
 				983C6949241EC8A30094C36E /* AppDelegate.swift in Sources */,
+				9897A3FA241F650200906CBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
