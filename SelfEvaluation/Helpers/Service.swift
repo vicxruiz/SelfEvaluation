@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class Service {
-    
+    static let answerMax = 50.0
     //user alerts
     static func showAlert(on: UIViewController, style: UIAlertController.Style, title: String?, message: String?, actions: [UIAlertAction] = [ UIAlertAction(title: "OK", style: .default, handler: nil)], completion: (() -> Swift.Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)

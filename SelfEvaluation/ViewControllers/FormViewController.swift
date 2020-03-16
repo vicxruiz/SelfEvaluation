@@ -35,6 +35,10 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         super.viewDidLoad()
         initBinding()
         setupTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if !MFMailComposeViewController.canSendMail() {
             Service.showAlert(on: self, style: .alert, title: "Mail Services Not Available", message: "Please use valid device.")
             return
@@ -43,7 +47,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
     
     //MARK: - Helper
     
-    func initBinding() {
+    private func initBinding() {
         _ = fullNameTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.fullName)
         _ = emailTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.email)
         _ = projectRepoTextField.rx.text.map { $0 ?? "" }.bind(to: formViewModel.projectRepo)
@@ -54,12 +58,12 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
         }, onError: nil, onCompleted: nil, onDisposed: nil)
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    func displayFormInfo() {
+    private func displayFormInfo() -> String {
         var output = ""
         for question in formController.questions {
             output += "Full Name: \(formViewModel.fullName.value)\n"
@@ -69,8 +73,20 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
             output += "Results\n"
             output += "\(question.description): \(question.answer)\n"
         }
+        return output
     }
     
+    private func formIsValid() -> Bool {
+        var answerResult = 0.0
+        for question in formController.questions {
+            answerResult += question.answer
+        }
+        if answerResult > Service.answerMax {
+            Service.showAlert(on: self, style: .alert, title: "Error Submitting Form", message: "Maximum answer points allowed: \(Service.answerMax). Current answer points: \(answerResult)")
+            return false
+        }
+        return true
+    }
     //MARK: - Actions
     
     @IBAction func submitButtonPressed(_ sender: Any) {
@@ -79,7 +95,13 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate 
 
         composeVC.setToRecipients(["ruizdvictor@gmail.com"])
         composeVC.setSubject("\(self.formViewModel.fullName.value) Self Evaluation")
-        composeVC.setMessageBody(" ", isHTML: false)
+        if formIsValid() {
+            let output = displayFormInfo()
+            composeVC.setMessageBody(output, isHTML: false)
+        
+        } else {
+            return
+        }
 
         self.present(composeVC, animated: true, completion: nil)
     }
@@ -110,7 +132,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
 extension FormViewController: FormCellDelegate {
     func didComplete(_ cell: FormTableViewCell, atIndexPath indexPath: IndexPath) {
         let question = formController.questions[indexPath.row]
-        guard let text = cell.formTextField.text, !text.isEmpty, let answer = Int(text) else {
+        guard let text = cell.formTextField.text, !text.isEmpty, let answer = Double(text) else {
             return
         }
         formController.update(question: question, answer: answer)

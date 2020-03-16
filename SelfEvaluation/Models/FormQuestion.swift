@@ -10,5 +10,5 @@ import Foundation
 
 struct FormQuestion: Equatable {
     var description: String
-    var answer: Int
+    var answer: Double
 }

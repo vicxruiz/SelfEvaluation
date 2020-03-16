@@ -19,12 +19,12 @@ class FormController {
     
     func createQuestions() {
         for questionString in questionStrings {
-            let questionString = FormQuestion(description: questionString, answer: 0)
+            let questionString = FormQuestion(description: questionString, answer: 0.0)
             questions.append(questionString)
         }
     }
     
-    func update(question: FormQuestion, answer: Int) {
+    func update(question: FormQuestion, answer: Double) {
         guard let index = questions.index(of: question) else {
             print("no index")
             return }
