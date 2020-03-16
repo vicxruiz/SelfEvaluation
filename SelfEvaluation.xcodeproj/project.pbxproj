@@ -19,6 +19,9 @@
 		9897A3E8241F569A00906CBB /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3E7241F569A00906CBB /* FormViewModel.swift */; };
 		9897A3F6241F5E2600906CBB /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3F5241F5E2600906CBB /* String+Validation.swift */; };
 		9897A3FA241F650200906CBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A3F9241F650200906CBB /* SceneDelegate.swift */; };
+		9897A430241F6C9300906CBB /* FormQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A42F241F6C9300906CBB /* FormQuestion.swift */; };
+		9897A432241F6E3600906CBB /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A431241F6E3600906CBB /* Candidate.swift */; };
+		9897A434241F701A00906CBB /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9897A433241F701A00906CBB /* FormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		9897A3F2241F582500906CBB /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9897A3F5241F5E2600906CBB /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
 		9897A3F9241F650200906CBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9897A42F241F6C9300906CBB /* FormQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormQuestion.swift; sourceTree = "<group>"; };
+		9897A431241F6E3600906CBB /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		9897A433241F701A00906CBB /* FormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 		B1CA6B57F40D267071CD2DED /* Pods-SelfEvaluation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfEvaluation.release.xcconfig"; path = "Target Support Files/Pods-SelfEvaluation/Pods-SelfEvaluation.release.xcconfig"; sourceTree = "<group>"; };
 		DD0A8BE69CE10DEC8641ED0A /* Pods_SelfEvaluation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelfEvaluation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +113,8 @@
 		983C6947241EC8A30094C36E /* SelfEvaluation */ = {
 			isa = PBXGroup;
 			children = (
+				9897A42C241F6BA300906CBB /* ModelControllers */,
+				9897A429241F6AA400906CBB /* Models */,
 				9897A3F4241F5DF100906CBB /* Extensions */,
 				9897A3E6241F568000906CBB /* ViewModels */,
 				9897A3E3241F559F00906CBB /* Views */,
@@ -177,6 +185,23 @@
 				9897A3F5241F5E2600906CBB /* String+Validation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9897A429241F6AA400906CBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9897A42F241F6C9300906CBB /* FormQuestion.swift */,
+				9897A431241F6E3600906CBB /* Candidate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9897A42C241F6BA300906CBB /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9897A433241F701A00906CBB /* FormController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		A111991A05C32C2F84ABED36 /* Frameworks */ = {
@@ -342,6 +367,9 @@
 				9897A3E2241F551500906CBB /* FormViewController.swift in Sources */,
 				9897A3E8241F569A00906CBB /* FormViewModel.swift in Sources */,
 				983C6949241EC8A30094C36E /* AppDelegate.swift in Sources */,
+				9897A430241F6C9300906CBB /* FormQuestion.swift in Sources */,
+				9897A434241F701A00906CBB /* FormController.swift in Sources */,
+				9897A432241F6E3600906CBB /* Candidate.swift in Sources */,
 				9897A3FA241F650200906CBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

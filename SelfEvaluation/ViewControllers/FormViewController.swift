@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 class FormViewController: UIViewController {
+
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var projectRepoTextField: UITextField!
@@ -20,6 +21,7 @@ class FormViewController: UIViewController {
     
     private var formViewModel = FormViewModel()
     private var disposeBag = DisposeBag()
+    var formController = FormController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,3 +43,5 @@ class FormViewController: UIViewController {
         
     }
 }
+
+
