@@ -32,7 +32,5 @@ class FormController {
         item.answer = answer
         questions[index] = item
     }
-    
-    
 }
 

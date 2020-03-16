@@ -147,6 +147,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+//MARK: - Cell Delegate
 
 extension FormViewController: FormCellDelegate {
     func didComplete(_ cell: FormTableViewCell, atIndexPath indexPath: IndexPath) {
